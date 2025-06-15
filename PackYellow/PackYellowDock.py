@@ -76,10 +76,10 @@ cols = 12
 total_cells = rows * cols
 
 # 右側マスの左上座標と幅・高さ（割合で指定）
-right_grid_left = 1270/1920
-right_grid_top = 590/1080
-right_grid_right = 1900/1920
-right_grid_bottom = 850/1080
+# right_grid_left = 1270/1920
+# right_grid_top = 590/1080
+# right_grid_right = 1900/1920
+# right_grid_bottom = 850/1080
 
 right_grid_width = right_grid_right - right_grid_left
 right_grid_height = right_grid_bottom - right_grid_top
@@ -89,8 +89,8 @@ cell_width = right_grid_width / cols
 cell_height = right_grid_height / rows
 
 # 左側の特定箇所
-left_click_x = 145/1920
-left_click_y = 290/1080
+# left_click_x = 145/1920
+# left_click_y = 290/1080
 
 def get_cell_pos(index):
     """1始まりのマス番号から座標を計算"""
@@ -150,7 +150,7 @@ def automation():
     except Exception as e:
         print(f"エラー: {e}")
     finally:
-        running = False
+        running = False  # ← ここでrunningをFalseにして再度ホットキーを受け付ける
 
 def toggle_automation():
     global running, thread
